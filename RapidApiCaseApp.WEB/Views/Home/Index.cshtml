@@ -1,0 +1,556 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+
+    var today = DateTime.Today;
+    var checkin = today.AddDays(1).ToString("yyyy-MM-dd");
+    var checkout = today.AddDays(4).ToString("yyyy-MM-dd");
+}
+
+<main class="sf-home">
+
+    <section class="sf-hero">
+        <div class="container">
+
+            <div class="row align-items-center g-4 sf-hero-row">
+
+                <!-- HERO CONTENT -->
+                <div class="col-lg-6">
+                    <div class="sf-hero-content">
+
+                        <span class="sf-eyebrow">
+                            <i class="bi bi-stars"></i>
+                            DÜNYAYI KEŞFET
+                        </span>
+
+                        <h1 class="sf-hero-title">
+                            Sıradaki konaklamanı
+                            <span>keşfet.</span>
+                        </h1>
+
+                        <p class="sf-hero-description">
+                            Dünyanın dört bir yanındaki otelleri karşılaştır,
+                            sana en uygun konaklamayı kolayca bul.
+                        </p>
+
+                        <div class="sf-trust-list">
+
+                            <div class="sf-trust-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>Güvenli rezervasyon</span>
+                            </div>
+
+                            <div class="sf-trust-item">
+                                <i class="bi bi-tag"></i>
+                                <span>Şeffaf fiyatlar</span>
+                            </div>
+
+                            <div class="sf-trust-item">
+                                <i class="bi bi-headset"></i>
+                                <span>7/24 destek</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- HERO ILLUSTRATION -->
+                <div class="col-lg-6 d-none d-lg-block">
+
+                    <div class="sf-hero-illustration" aria-hidden="true">
+
+                        <svg viewBox="0 0 520 360"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <circle cx="300" cy="190" r="160"
+                                    fill="#E9EBFB" />
+
+                            <circle cx="415" cy="80" r="26"
+                                    fill="#FFD9A8" />
+
+                            <g fill="#FFFFFF">
+                                <rect x="120" y="70" width="90"
+                                      height="26" rx="13" />
+                                <rect x="140" y="56" width="46"
+                                      height="30" rx="15" />
+                                <rect x="380" y="140" width="80"
+                                      height="22" rx="11" />
+                            </g>
+
+                            <path d="M60 170 C130 110 200 120 250 80"
+                                  fill="none"
+                                  stroke="#B9BDEB"
+                                  stroke-width="2.5"
+                                  stroke-dasharray="6 8"
+                                  stroke-linecap="round" />
+
+                            <g transform="translate(250 72) rotate(-28)">
+                                <path d="M0 8 L34 4 L44 0 L48 4 L44 8 L34 8 L0 12 Z"
+                                      fill="#3B3FB6" />
+                                <path d="M18 7 L10 -8 L16 -8 L28 6 Z"
+                                      fill="#5A5ED0" />
+                                <path d="M18 9 L10 22 L16 22 L28 10 Z"
+                                      fill="#5A5ED0" />
+                            </g>
+
+                            <!-- Hotel -->
+                            <rect x="230" y="120" width="140"
+                                  height="210" rx="10"
+                                  fill="#FFFFFF" />
+
+                            <rect x="230" y="120" width="140"
+                                  height="26" rx="10"
+                                  fill="#3B3FB6" />
+
+                            <rect x="230" y="136" width="140"
+                                  height="10" fill="#3B3FB6" />
+
+                            <text x="300" y="138"
+                                  text-anchor="middle"
+                                  font-family="Manrope,Arial,sans-serif"
+                                  font-size="12"
+                                  font-weight="800"
+                                  fill="#FFFFFF"
+                                  letter-spacing="3">HOTEL</text>
+
+                            <g fill="#DADDF6">
+
+                                <rect x="248" y="162" width="22" height="26" rx="4" />
+                                <rect x="289" y="162" width="22" height="26" rx="4" />
+                                <rect x="330" y="162" width="22" height="26" rx="4" />
+
+                                <rect x="248" y="202" width="22" height="26" rx="4" />
+                                <rect x="289" y="202" width="22" height="26" rx="4"
+                                      fill="#FFD9A8" />
+                                <rect x="330" y="202" width="22" height="26" rx="4" />
+
+                                <rect x="248" y="242" width="22" height="26" rx="4"
+                                      fill="#FFD9A8" />
+                                <rect x="289" y="242" width="22" height="26" rx="4" />
+                                <rect x="330" y="242" width="22" height="26" rx="4" />
+
+                            </g>
+
+                            <rect x="282" y="284" width="36"
+                                  height="46" rx="6"
+                                  fill="#3B3FB6" />
+
+                            <!-- Side building -->
+                            <rect x="380" y="200" width="70"
+                                  height="130" rx="8"
+                                  fill="#F5F6FA" />
+
+                            <g fill="#DADDF6">
+
+                                <rect x="394" y="216" width="16" height="18" rx="3" />
+                                <rect x="420" y="216" width="16" height="18" rx="3" />
+
+                                <rect x="394" y="246" width="16" height="18" rx="3" />
+                                <rect x="420" y="246" width="16" height="18" rx="3" />
+
+                            </g>
+
+                            <!-- Palm -->
+                            <rect x="184" y="230" width="8"
+                                  height="100" rx="4"
+                                  fill="#C9A77C" />
+
+                            <g fill="#6FB39A">
+
+                                <ellipse cx="170" cy="228"
+                                         rx="28" ry="9"
+                                         transform="rotate(-20 170 228)" />
+
+                                <ellipse cx="208" cy="228"
+                                         rx="28" ry="9"
+                                         transform="rotate(20 208 228)" />
+
+                                <ellipse cx="188" cy="220"
+                                         rx="9" ry="24" />
+
+                            </g>
+
+                            <!-- Suitcase -->
+                            <g transform="translate(96 250)">
+
+                                <rect x="16" y="-14" width="26"
+                                      height="18" rx="6"
+                                      fill="none"
+                                      stroke="#1B2140"
+                                      stroke-width="5" />
+
+                                <rect x="0" y="0" width="58"
+                                      height="76" rx="10"
+                                      fill="#1B2140" />
+
+                                <rect x="12" y="10" width="6"
+                                      height="56" rx="3"
+                                      fill="#3B3FB6" />
+
+                                <rect x="40" y="10" width="6"
+                                      height="56" rx="3"
+                                      fill="#3B3FB6" />
+
+                                <circle cx="12" cy="80" r="4"
+                                        fill="#1B2140" />
+
+                                <circle cx="46" cy="80" r="4"
+                                        fill="#1B2140" />
+
+                            </g>
+
+                            <rect x="60" y="330" width="420"
+                                  height="4" rx="2"
+                                  fill="#DADDF6" />
+
+                        </svg>
+
+                        <div class="sf-floating-review">
+
+                            <span class="sf-review-score">
+                                9,2
+                            </span>
+
+                            <div class="sf-review-content">
+                                <strong>Mükemmel</strong>
+                                <small>1.284 misafir yorumu</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SEARCH PANEL -->
+            <div class="sf-search-panel">
+
+                <div class="sf-search-header">
+                    <div>
+
+                        <span class="sf-search-kicker">
+                            <i class="bi bi-search"></i>
+                            OTEL ARAMA
+                        </span>
+
+                        <h2>Hayalindeki konaklamayı bul</h2>
+
+                        <p>
+                            Seyahat bilgilerini gir,
+                            sana uygun otelleri keşfet.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div id="hotelSearchError"
+                     class="alert alert-danger sf-form-error"
+                     role="alert"
+                     aria-live="polite"
+                     hidden>
+                </div>
+
+                <form id="hotelSearchForm"
+                      asp-controller="Hotel"
+                      asp-action="HotelList"
+                      data-destination-url="@Url.Action("SearchDestinations", "Hotel")"
+                      data-validation-url="@Url.Action("ValidateSearch", "Hotel")"
+                      method="get"
+                      novalidate>
+
+                    <!-- FIRST ROW -->
+                    <div class="sf-search-grid">
+
+                        <!-- DESTINATION AUTOCOMPLETE -->
+                        <div class="sf-search-field sf-destination-field"
+                             id="destinationField">
+
+                            <label for="destination">
+                                <i class="bi bi-geo-alt"></i>
+                                Nereye gidiyorsunuz?
+                            </label>
+
+                            <div class="sf-destination-input-wrapper">
+
+                                <input type="text"
+                                       id="destination"
+                                       name="destination"
+                                       placeholder="Şehir, bölge veya havalimanı"
+                                       autocomplete="off"
+                                       minlength="2"
+                                       maxlength="100"
+                                       role="combobox"
+                                       aria-autocomplete="list"
+                                       aria-expanded="false"
+                                       aria-controls="destinationResults" />
+
+                                <!-- Seçilen Booking.com destinasyon kimliği -->
+                                <input type="hidden"
+                                       id="destId"
+                                       name="destId" />
+
+                                <!-- city / district / airport -->
+                                <input type="hidden"
+                                       id="searchType"
+                                       name="searchType" />
+
+                                <!-- AJAX sonuçları JS tarafından doldurulur -->
+                                <div id="destinationResults"
+                                     class="sf-destination-results"
+                                     role="listbox"
+                                     hidden>
+                                </div>
+
+                            </div>
+
+                            <div id="destinationMessage"
+                                 class="sf-destination-message"
+                                 aria-live="polite">
+                            </div>
+
+                        </div>
+
+                        <!-- CHECKIN -->
+                        <div class="sf-search-field">
+
+                            <label for="checkin">
+                                <i class="bi bi-calendar3"></i>
+                                Giriş
+                            </label>
+
+                            <input type="date"
+                                   id="checkin"
+                                   name="checkin"
+                                   value="@checkin"
+                                   min="@today.ToString("yyyy-MM-dd")" />
+
+                        </div>
+
+                        <!-- CHECKOUT -->
+                        <div class="sf-search-field">
+
+                            <label for="checkout">
+                                <i class="bi bi-calendar3"></i>
+                                Çıkış
+                            </label>
+
+                            <input type="date"
+                                   id="checkout"
+                                   name="checkout"
+                                   value="@checkout"
+                                   min="@checkin" />
+
+                        </div>
+
+                        <!-- CURRENCY -->
+                        <div class="sf-search-field">
+
+                            <label for="currency">
+                                <i class="bi bi-cash-coin"></i>
+                                Para Birimi
+                            </label>
+
+                            <select id="currency"
+                                    name="currency">
+
+                                <option value="EUR" selected>EUR</option>
+                                <option value="USD">USD</option>
+                                <option value="TRY">TRY</option>
+                                <option value="GBP">GBP</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SECOND ROW -->
+                    <div class="sf-guests-grid">
+
+                        <!-- ADULTS -->
+                        <div class="sf-counter-field">
+
+                            <label>
+                                <i class="bi bi-person"></i>
+                                Yetişkin
+                            </label>
+
+                            <div class="sf-counter counter"
+                                 data-min="1"
+                                 data-max="10">
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="minus"
+                                        aria-label="Yetişkin azalt">
+
+                                    <i class="bi bi-dash"></i>
+
+                                </button>
+
+                                <input type="text"
+                                       name="adults"
+                                       class="sf-counter-value counter-value"
+                                       value="2"
+                                       readonly
+                                       aria-label="Yetişkin sayısı" />
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="plus"
+                                        aria-label="Yetişkin artır">
+
+                                    <i class="bi bi-plus"></i>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <!-- CHILDREN -->
+                        <div class="sf-counter-field">
+
+                            <label>
+                                <i class="bi bi-emoji-smile"></i>
+                                Çocuk
+                            </label>
+
+                            <div class="sf-counter counter"
+                                 id="childCounter"
+                                 data-min="0"
+                                 data-max="6">
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="minus"
+                                        aria-label="Çocuk azalt">
+
+                                    <i class="bi bi-dash"></i>
+
+                                </button>
+
+                                <input type="text"
+                                       name="children"
+                                       class="sf-counter-value counter-value"
+                                       value="1"
+                                       readonly
+                                       aria-label="Çocuk sayısı" />
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="plus"
+                                        aria-label="Çocuk artır">
+
+                                    <i class="bi bi-plus"></i>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <!-- ROOMS -->
+                        <div class="sf-counter-field">
+
+                            <label>
+                                <i class="bi bi-door-closed"></i>
+                                Oda
+                            </label>
+
+                            <div class="sf-counter counter"
+                                 data-min="1"
+                                 data-max="5">
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="minus"
+                                        aria-label="Oda azalt">
+
+                                    <i class="bi bi-dash"></i>
+
+                                </button>
+
+                                <input type="text"
+                                       name="rooms"
+                                       class="sf-counter-value counter-value"
+                                       value="1"
+                                       readonly
+                                       aria-label="Oda sayısı" />
+
+                                <button type="button"
+                                        class="sf-counter-btn counter-btn"
+                                        data-action="plus"
+                                        aria-label="Oda artır">
+
+                                    <i class="bi bi-plus"></i>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <!-- CHILD AGES -->
+                        <div class="sf-counter-field"
+                             id="childAgeWrapper">
+
+                            <label>
+                                <i class="bi bi-balloon"></i>
+                                Çocuk Yaşı
+                            </label>
+
+                            <!-- JS çocuk sayısına göre select üretir -->
+                            <select id="childAge"
+                                    name="childAges"
+                                    class="sf-age-select">
+
+                                @for (int age = 0; age <= 17; age++)
+                                {
+                                    if (age == 2)
+                                    {
+                                        <option value="@age" selected>
+                                            @age yaş
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@age">
+                                            @age yaş
+                                        </option>
+                                    }
+                                }
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SEARCH ACTION -->
+                    <div class="sf-search-footer">
+
+                        <p class="sf-search-note">
+                            <i class="bi bi-shield-check"></i>
+                            Seyahatine uygun konaklama seçeneklerini keşfet.
+                        </p>
+
+                        <button type="submit"
+                                class="sf-search-button">
+
+                            <i class="bi bi-search"></i>
+
+                            <span>Otelleri Ara</span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
